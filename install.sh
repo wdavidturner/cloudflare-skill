@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="https://github.com/dmmulroy/cloudflare-skill.git"
+REPO_URL="https://github.com/wdavidturner/cloudflare-skill.git"
 SKILL_NAME="cloudflare"
 
 usage() {
@@ -16,8 +16,8 @@ Options:
   -h, --help      Show this help message
 
 Examples:
-  curl -fsSL https://raw.githubusercontent.com/dmmulroy/cloudflare-skill/main/install.sh | bash
-  curl -fsSL https://raw.githubusercontent.com/dmmulroy/cloudflare-skill/main/install.sh | bash -s -- --global
+  curl -fsSL https://raw.githubusercontent.com/wdavidturner/cloudflare-skill/main/install.sh | bash
+  curl -fsSL https://raw.githubusercontent.com/wdavidturner/cloudflare-skill/main/install.sh | bash -s -- --global
 EOF
 }
 

@@ -1,6 +1,6 @@
 ---
 name: cloudflare
-description: Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task.
+description: Comprehensive Cloudflare platform skill covering Workers, Pages, Dynamic Workers, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK, Codemode), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task.
 references:
   - workers
   - pages
@@ -34,6 +34,7 @@ Need to run code?
 ├─ Serverless functions at the edge → workers/
 ├─ Full-stack web app with Git deploys → pages/
 ├─ Stateful coordination/real-time → durable-objects/
+├─ Dynamic/AI-generated code in sandboxes → dynamic-workers/
 ├─ Long-running multi-step jobs → workflows/
 ├─ Run containers → containers/
 ├─ Multi-tenant (customers deploy code) → workers-for-platforms/
@@ -65,6 +66,8 @@ Need AI?
 ├─ Run inference (LLMs, embeddings, images) → workers-ai/
 ├─ Vector database for RAG/search → vectorize/
 ├─ Build stateful AI agents → agents-sdk/
+├─ AI agent sandbox (execute AI-generated code) → dynamic-workers/
+├─ AI code-mode tool use (reduce tokens 81%) → codemode/
 ├─ Gateway for any AI provider (caching, routing) → ai-gateway/
 └─ AI-powered search widget → ai-search/
 ```
@@ -119,6 +122,7 @@ Need IaC? → pulumi/ (Pulumi), terraform/ (Terraform), or api/ (REST API)
 | Pages | `references/pages/` |
 | Pages Functions | `references/pages-functions/` |
 | Durable Objects | `references/durable-objects/` |
+| Dynamic Workers | `references/dynamic-workers/` |
 | Workflows | `references/workflows/` |
 | Containers | `references/containers/` |
 | Workers for Platforms | `references/workers-for-platforms/` |
@@ -149,6 +153,7 @@ Need IaC? → pulumi/ (Pulumi), terraform/ (Terraform), or api/ (REST API)
 | Agents SDK | `references/agents-sdk/` |
 | AI Gateway | `references/ai-gateway/` |
 | AI Search | `references/ai-search/` |
+| Codemode | `references/codemode/` |
 
 ### Networking & Connectivity
 | Product | Reference |
@@ -183,12 +188,14 @@ Need IaC? → pulumi/ (Pulumi), terraform/ (Terraform), or api/ (REST API)
 | RealtimeKit | `references/realtimekit/` |
 | Realtime SFU | `references/realtime-sfu/` |
 
-### Developer Tools
+### Developer Tools & Libraries
 | Product | Reference |
 |---------|-----------|
 | Wrangler | `references/wrangler/` |
 | Miniflare | `references/miniflare/` |
 | C3 | `references/c3/` |
+| Worker Bundler | `references/worker-bundler/` |
+| Cloudflare Shell | `references/cloudflare-shell/` |
 | Observability | `references/observability/` |
 | Analytics Engine | `references/analytics-engine/` |
 | Web Analytics | `references/web-analytics/` |

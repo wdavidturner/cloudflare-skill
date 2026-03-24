@@ -1,10 +1,10 @@
 # PROJECT KNOWLEDGE BASE
 
-**Generated:** 2026-01-28
+**Generated:** 2026-03-24
 
 ## OVERVIEW
 
-Documentation/skill repository for Cloudflare platform—structured reference docs for AI/LLM consumption. No executable code.
+Documentation/skill repository for Cloudflare platform — structured reference docs for AI/LLM consumption. No executable code. Compatible with the [Agent Skills](https://agentskills.io) ecosystem (`npx skills add`).
 
 ## STRUCTURE
 
@@ -12,9 +12,9 @@ Documentation/skill repository for Cloudflare platform—structured reference do
 ./
 ├── README.md             # Project overview + install instructions
 ├── LICENSE               # MIT license
-├── install.sh            # Installation script
+├── install.sh            # Legacy OpenCode installation script
 ├── command/
-│   └── cloudflare.md     # /cloudflare slash command
+│   └── cloudflare.md     # /cloudflare slash command (OpenCode)
 └── skills/
     └── cloudflare/
         ├── SKILL.md              # Main skill manifest + decision trees
@@ -46,7 +46,7 @@ jj new
 jj commit -m "msg"
 
 # WRONG - do not use
-git status  # .jj/ present = use jj
+git status  # use jj instead
 ```
 
 ### Reference File Structure
@@ -54,7 +54,7 @@ git status  # .jj/ present = use jj
 Every product follows 5-file pattern:
 - `README.md` — Overview, when to use
 - `api.md` — Runtime API reference
-- `configuration.md` — `wrangler.toml` + binding setup
+- `configuration.md` — `wrangler.jsonc` + binding setup
 - `patterns.md` — Usage patterns
 - `gotchas.md` — Pitfalls, limitations
 
@@ -65,8 +65,6 @@ Every product follows 5-file pattern:
 ---
 name: product-name
 description: Brief description
-references:
-  - related-product
 ---
 ```
 
@@ -103,13 +101,13 @@ try {
 
 ### Configuration
 
-```toml
-# ALWAYS set compatibility_date for new projects (workers)
-compatibility_date = "2026-01-01"
+```jsonc
+// ALWAYS set compatibility_date for new projects (workers)
+{ "compatibility_date": "2026-03-01" }
 ```
 
 ## NOTES
 
 - No CI/CD configured (docs-only repo)
 - No linting/formatting (no code to lint)
-- `.opencode/` contains plugin config, not project code
+- `install.sh` and `command/` are legacy OpenCode support; primary install is `npx skills add`
